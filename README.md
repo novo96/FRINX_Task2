@@ -1,20 +1,23 @@
-This is my solution for the task assignment below. Assignment is also a description how the application works.
+**This is my solution for the task assignment below. Assignment is also a description how the application works.**
 
-The whole project was dockerized.
+**The whole project was dockerized.**
 
-RUNNING THE APPLICATION:
+## RUNNING THE APPLICATION:
 
 1. Docker and docker-compose should be installed on your computer
 
 2. The project folder should contain an .env file with these environment variables:
-    API_KEY=        - you can get yours here: https://free.currencyconverterapi.com/
-    DB_USER=        - default: postgres
-    DB_PASSWORD=    - default: postgres
-
+    ```
+    API_KEY=        #you can get yours here: https://free.currencyconverterapi.com/
+    DB_USER=        #default: postgres
+    DB_PASSWORD=    #default: postgres
+    ```
 3. Everthing needed for the application and application itself should start with with the following command from the project directory: 
+    ```
     docker-compose run --rm main
-
-TASK ASSIGNMENT:
+    ```
+    
+## TASK ASSIGNMENT:
 
 Create a CLI application that will prompt the user for a currency pair 
 and then print the exchange rate for that pair.
@@ -28,10 +31,11 @@ A valid input will be in form "USD EUR". The app should then print the
 exchange rate for that pair.
 
 The currency pair input should be treated as case-insensitive. All of these are a valid input:
-    USD EUR
-    usd eur
-    usD EuR
-
+```
+USD EUR
+usd eur
+usD EuR
+```
 No other input besides two currency pairs and commands for quitting and history should be accepted.
 If user enters an invalid input, the app should print an error message and prompt the user again.
 
@@ -46,10 +50,11 @@ the currency pair (USD EUR) and the exchange rate. The exchange rate should be c
 (This means that you will somehow have to store in database whether the exchange rate was higher of lower than a day before.)
 
 An example 'history' command output:
-    2022-05-02 12:00 USD EUR 1.12
-    2022-05-04 23:13 AUD CAD 1.82
-    2022-05-03 11:57 CHF JPY 14.22
-
+```
+2022-05-02 12:00 USD EUR 1.12
+2022-05-04 23:13 AUD CAD 1.82
+2022-05-03 11:57 CHF JPY 14.22
+```
 The formatting of the date and time is up to you.
 
 The database should be running in Docker. The definition of that containerized database should be
